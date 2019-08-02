@@ -1,0 +1,170 @@
+<style>
+    body {
+        font-family: "Open Sans",Helvetica,Arial,sans-serif;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 1.49;
+        color: #666;
+        background-color: #ddd;
+        padding: 15px;
+    }
+    h1{
+        text-align: center;
+        color: rgb(124, 119, 119);
+        padding: 10px;
+    }
+    div{
+        background-color: #fff;
+        border: 1px solid #e2e2e2;
+        padding: 10px 5px;
+    }
+    p{
+        text-align: justify;
+        margin: 10px 50px 10px 50px;
+    }
+    img{
+        height: 80px;
+    
+    }
+    header{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+    }
+    
+    
+    </style>
+    <header>
+        <img src="https://circuitodavisaonovo.com.br/img/logos/new_logo_circuito.png?v=1" alt="" />
+    </header>
+    
+    <h1>Manual-Circuito da visão</h1>
+    
+    <div id='root'>
+        
+    </div>
+    
+    <script>
+    
+    let listaDePerguntas = []
+    const pergunta1 = {
+        pergunta: 'Como cadastrar minha célula',
+        resposta: 'Clique no menu na lateral esquerda > Cadastro > Minha Célula>+Nova Célula>Selecione o dia da semana>Selecione o Horário da célula > Insira o CEP de onde ocorre a célula > Insira o Nome do Hospedeiro da célula > Insira o número do Telefone do Hospedeiro da célula > Digite sua senha para finalizar o processo do Cadastro > Confirmar',
+    }
+    const pergunta2 = {
+        pergunta: 'Como cadastrar um Time',
+        resposta: 'Clique no menu na lateral esquerda > Cadastro > Time > Selecione se o cadastro do Time será Sozinho ou Com cônjuge > Clique no botão Inserir > Selecione a data de nascimento > Insira o CPF > Insira o Email do usuário > Repita o Email do usuário > Selecione a Hierarquia > Selecione o Número da Sub Equipe e finalize o processo. depois desse processo é necessário verificar as mensagens no Email cadastrado para que a senha seja cadastrada',
+    }
+    const pergunta3 = {
+        pergunta: 'Como cadastrar um Discipulado',
+        resposta: 'Clique no menu na lateral esquerda>Cadastro>Discipulados>+Novo Discipulado>Preencha o dia e Horário da semanada que ocorre o Discipulado>Clique no botão Continuar>Insira o Nome do seu Discipulado>Clique no botão Continuar>Digite a sua senha e Clique no botão Confirmar',
+    }
+    const pergunta4 = {
+        pergunta: 'Como cadastrar um Revisionista',
+        resposta: 'Clique no menu na lateral esquerda>Cadastro>Revisionistas>Clique no botão Selecionar>Clique no botão +Selecionar que está na frente do nome do revisionista que deseja cadastrar>Insira o Nome e Telefone>Selecione a data de nascimento>Selecione o Sexo>Clique no botão Cadastrar.',
+    }
+    const pergunta5 = {
+        pergunta: 'Como fazer meu cadastro para Trabalhar no Revisão de Vidas',
+        resposta: 'Clique no menu na lateral esquerda>Cadastro>Trabalhar no Revisão de Vidas>Clique no botão Selecionar>Clique no botão Ativar. Pronto o seu cadastro para trabalhar no revisão de vidas foi realizado',
+    }
+    const pergunta6 = {
+        pergunta: 'Como Lançar minha Arregimentação',
+        resposta: 'Clique no menu na lateral esquerda>Lançar>Arregimentação>Clique no botão para preencher o culto ou célula>Clique no botão Enviar relatório. Pronto o seu lançamento foi realizado. ',
+    }
+    const pergunta7 = {
+        pergunta: 'Como cadastrar um Visitante,Membro ou Consolidação',
+        resposta: 'Clique no menu na lateral esquerda>Lançar>Arregimentação>No final da sua página de lançamento Clique no botão Cadastrar Pessoa>Preencha o Nome e Telefone>Selecione o Tipo (Visitante,Consolidação ou Membro)>Clique no Botão Cadastrar. Pronto o seu Visitante,Consolidação ou Membro foi cadastrado.',
+    }
+    const pergunta8 = {
+        pergunta: 'Como Lançar Atendimento',
+        resposta: 'Clique no menu na lateral esquerda>Lançar>Atendimento>Clique no botão "+". Pronto o Lançamento do atendimento foi realizado. ',
+    }
+    const pergunta9 = {
+        pergunta: 'Como Lançar Parceiro de Deus',
+        resposta: 'Clique no menu na lateral esquerda>Lançar>Parceiro de Deus>Clique no botão Lançar>Selecione o Tipo(Parceiro de Deus Individual ou Parceiro de Deus de célula)>Clique no botão Selecionar>Selecione o Time>Selecione Qual líder>Preencha o Valor>Selecione a Data>Clique no botão Lançar. Pronto o Parceiro de Deus foi lançado.',
+    }
+    const pergunta10 = {
+        pergunta: 'Como Gerar uma Reposiçao',
+        resposta: 'Clique no menu na lateral esquerda>Cursos>Gerar Reposições>Selecione a Turma>Selecione a Equipe>Selecione a Sub Equipe>Clique no botão Filtar>Marque qual reposição deseja gerar>Clique no botão Gerar Reposições. Pronto a reposiçao foi gerada. ',
+    }
+    const pergunta11 = {
+        pergunta: 'Como Imprimir uma Ficha do Revisão de Vidas',
+        resposta: 'Clique no menu na lateral esquerda>Imprimir>Fichas Revisão de vidas>Clique no botão Selecione>Clique no botão Ficha>Clique no botão Imprimir. Pronto a ficha está sendo impressa. ',
+    }
+    const pergunta12 = {
+        pergunta: '',
+        resposta: '',
+    }
+    const pergunta13 = {
+        pergunta: '',
+        resposta: '',
+    }
+    const pergunta14 = {
+        pergunta: '',
+        resposta: '',
+    }
+    const pergunta15 = {
+        pergunta: '',
+        resposta: '',
+    }
+    const pergunta16 = {
+        pergunta: '',
+        resposta: '',
+    }
+    const pergunta17 = {
+        pergunta: '',
+        resposta: '',
+    }
+    const pergunta18 = {
+        pergunta: '',
+        resposta: '',
+    }
+    const pergunta19 = {
+        pergunta: '',
+        resposta: '',
+    }
+    const pergunta20 = {
+        pergunta: '',
+        resposta: '',
+    }
+    
+        listaDePerguntas[0] = pergunta1
+        listaDePerguntas[1] = pergunta2
+        listaDePerguntas[2] = pergunta3
+        listaDePerguntas[3] = pergunta4
+        listaDePerguntas[4] = pergunta5
+        listaDePerguntas[5] = pergunta6
+        listaDePerguntas[6] = pergunta7
+        listaDePerguntas[7] = pergunta8
+        listaDePerguntas[8] = pergunta9
+        listaDePerguntas[9] = pergunta10
+        listaDePerguntas[10] = pergunta11
+        listaDePerguntas[11] = pergunta12
+        listaDePerguntas[12] = pergunta13
+        listaDePerguntas[13] = pergunta14
+        listaDePerguntas[14] = pergunta15
+        listaDePerguntas[15] = pergunta16
+        listaDePerguntas[16] = pergunta17
+        listaDePerguntas[17] = pergunta18
+        listaDePerguntas[18] = pergunta19
+        listaDePerguntas[19] = pergunta20
+    
+    let html = ''
+    for(let x = 0;x < listaDePerguntas.length;x++){
+        const item = listaDePerguntas[x]
+        html += funcaoMostrarPergunta(item)
+    }
+    
+    document.getElementById('root').innerHTML = html
+    
+    function funcaoMostrarPergunta(item){
+        let html = ''
+        html+= '<div>'
+        html+= '<h1>' + item.pergunta + '</h1>'
+        html+= '<p>' + item.resposta + '</p>'
+        html+= '</div>'
+        return html
+    }
+    </script>
+    
